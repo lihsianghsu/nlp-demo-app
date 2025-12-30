@@ -1,3 +1,4 @@
+requests==2.31.0
 streamlit==1.52.1
 streamlit-component-navbar==0.7.7
 streamlit-elements==0.1.0
@@ -12,4 +13,5 @@ jieba==0.42.1
 transformers==4.54.1
 langdetect==1.0.9
 wordcloud==1.9.4
+
 
