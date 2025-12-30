@@ -7,7 +7,7 @@ image_path = Path("ls_ui") / "assets" / "linguasynapse_08.jpg"
 
 
 def main():
-    st.image(str(image_path), "content")
+    st.image(str(image_path), width="content")
 
 if __name__ == "__main__":
     main()
