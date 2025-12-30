@@ -1,5 +1,7 @@
 # NLP Content Intelligence Demo App
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://nlp-file-converter.streamlit.app/](https://nlp-demo-app.streamlit.app/)
+
 This repository contains a Streamlit-based demo application that showcases practical applications of Natural Language Processing (NLP) and related AI technologies. Designed for demonstration and exploration, the app provides an intuitive interface to experience how intelligent language tools can extract insights, manage content, and support data-driven workflows.
 
 ## 🌐 App Structure
@@ -55,5 +57,6 @@ for AI-driven products, with a strong focus on quality, explainability, and huma
 Have ideas or found a bug? Feel free to open an issue or submit a pull request! For questions, visit the **Contact** page in the app or reach out via the maintainer’s contact info.
 
 ---
+
 
 *Empowering smarter interactions with language — one demo at a time.*
