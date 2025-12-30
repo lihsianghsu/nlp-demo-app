@@ -1,9 +1,13 @@
 # Home.py
 import streamlit as st
 from i18n.translator import t
+from pathlib import Path
+
+image_path = Path("ls_ui") / "assets" / "linguasynapse_08.jpg"
+
 
 def main():
-    st.image(ls_ui/assets/linguasynapse_08.jpg", width="content")
+    st.image(str(image_path), "content")
 
 if __name__ == "__main__":
     main()
