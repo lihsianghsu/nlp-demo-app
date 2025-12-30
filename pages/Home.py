@@ -3,7 +3,7 @@ import streamlit as st
 from i18n.translator import t
 
 def main():
-    st.image(r"ls_ui\assets\linguasynapse_08.jpg", width="content")
+    st.image(ls_ui/assets/linguasynapse_08.jpg", width="content")
 
 if __name__ == "__main__":
     main()
