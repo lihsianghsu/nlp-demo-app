@@ -1,0 +1,242 @@
+/* =========================
+   Lingua Synapse Brand + Custom UI
+   ========================= */
+
+/* Brand variables */
+:root {
+    --primary-color: #0073aa;
+    --base-color: #ffffff;
+
+    --ls-bg-dark: #0e1117;
+    --ls-bg-muted: #0b0e13;
+
+    --ls-radius: 14px;
+
+    --ls-ease: cubic-bezier(0.4, 0.0, 0.2, 1);
+    --ls-fast: 160ms;
+    --ls-medium: 280ms;
+}
+
+/* Typography & links */
+a {
+    text-decoration-thickness: 0.5px;
+    text-underline-offset: 2px;
+}
+
+/* ===== Card system ===== */
+.ls-card {
+    background: var(--ls-bg-dark);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--ls-radius);
+    padding: 1.2rem 1.4rem;
+    margin-bottom: 1.6rem;
+    animation: ls-fade-in var(--ls-medium) var(--ls-ease);
+}
+.ls-card-muted { background: var(--ls-bg-muted); }
+.ls-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+.ls-card-title { font-weight: 600; font-size: 1.05rem; }
+.ls-card-actions span { cursor: pointer; opacity: 0.6; transition: opacity var(--ls-fast) var(--ls-ease), color var(--ls-fast) var(--ls-ease); }
+.ls-card-actions span:hover { opacity: 1; color: var(--primary-color); }
+
+/* ===== Motion ===== */
+@keyframes ls-fade-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Global transitions ===== */
+body, h1, h2, h3, p, a, button, table, [data-testid="stSidebar"] {
+    transition: all 0.3s ease-in-out;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    transform: scale(1.05);
+    background-color: #ff9800 !important;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect for links */
+a:hover {
+    color: #ff9800;
+    text-decoration-thickness: 0.5px !important;
+    text-underline-offset: 2px;
+    text-decoration: underline;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Button outline hover effect */
+.button-outline:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--base-color) !important;
+}
+
+/* Pullquote */
+.pullquote blockquote,
+.pullquote p { margin: 0 !important; }
+.pullquote blockquote {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 12px;
+    color: #555;
+    font-style: italic;
+    background-color: #f9f9f9;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+/* Centered image with caption */
+.centered-image { text-align: center; margin: 20px 0; }
+.centered-image img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+}
+.centered-image .caption {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 8px;
+}
+
+/* Code blocks */
+code {
+    background-color: #f5f5f5;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+}
+pre code {
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: block;
+    overflow-x: auto;
+}
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+th, td { border: 1px solid #ddd; text-align: left; padding: 8px; }
+th { background-color: var(--primary-color); color: var(--base-color); }
+tr:nth-child(even) { background-color: #f9f9f9; }
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid var(--primary-color);
+    margin: 20px 0;
+    padding-left: 15px;
+    color: #555;
+    background-color: #f9f9f9;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+/* Image hover */
+img:hover { transform: scale(1.05); transition: transform 0.3s ease; }
+
+/* Horizontal rule */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary-color), #ffffff, var(--primary-color));
+    margin: 30px 0;
+}
+
+/* Tooltip */
+.tooltip { position: relative; display: inline-block; cursor: pointer; }
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; left: 50%; margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltip:hover .tooltiptext { visibility: visible; opacity: 1; }
+
+/* Form elements */
+input[type="text"], select, textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 1em;
+}
+input[type="text"]:focus, select:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 115, 170, 0.5);
+}
+
+/* Toggle switch */
+.theme-toggle { position: relative; display: inline-block; width: 50px; height: 26px; }
+.theme-toggle input { opacity: 0; width: 0; height: 0; }
+.slider {
+    position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc; transition: 0.4s; border-radius: 26px;
+}
+.slider:before {
+    position: absolute; content: ""; height: 20px; width: 20px; left: 3px; bottom: 3px;
+    background-color: white; transition: 0.4s; border-radius: 50%;
+}
+input:checked + .slider { background-color: var(--primary-color); }
+input:checked + .slider:before { transform: translateX(24px); }
+
+/* Tabs (button-style, centered) */
+.theme-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 1rem 0;
+}
+.theme-tab {
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--ls-bg-dark);
+  color: #fff;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+.theme-tab.active {
+  background-color: var(--base-color);
+  color: #000;
+  font-weight: bold;
+}
+.theme-tab:hover { background-color: #666; }
+/* Tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+/* End of brand.css */
+/* =========================
+   End of Lingua Synapse Brand + Custom UI
+   ========================= */

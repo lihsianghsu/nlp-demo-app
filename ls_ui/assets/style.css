@@ -1,0 +1,41 @@
+/*
+Theme Name: Fotograma
+Theme URI: https://wordpress.com/themes/fotograma/
+Description: Fotograma is a portfolio theme for photographers seeking to showcase powerful photography in large sizes.
+Version: 1.0.4
+Author: Automattic
+Author URI: https://automattic.com/
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: fotograma
+*/
+
+/*
+ * Control the hover stylings of outline block style.
+ * Unnecessary once block styles are configurable via theme.json
+ * https://github.com/WordPress/gutenberg/issues/42794
+ */
+.wp-block-button.is-style-outline >.wp-block-button__link:not(.has-background):hover {
+	background-color: var(--wp--preset--color--primary);
+	border-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--base);
+}
+
+/*
+ * Link styles
+ * https://github.com/WordPress/gutenberg/issues/42319
+ */
+a {
+	text-decoration-thickness: 0.5px !important;
+	text-underline-offset: 2px;
+}
+
+/*
+ * Pull quote Block
+ * Reset the browser default margins for blockquote element
+ * https://github.com/WordPress/gutenberg/issues/44129
+ */
+.wp-block-pullquote blockquote,
+.wp-block-pullquote p {
+	margin: 0;
+}

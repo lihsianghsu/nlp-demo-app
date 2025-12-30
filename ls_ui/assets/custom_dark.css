@@ -1,0 +1,136 @@
+/* ===== Dark Mode Theme ===== */
+
+/* Backgrounds */
+body {
+    background-color: #121212; /* deep dark background */
+    font-family: 'Roboto', sans-serif;
+    color: #e0e0e0; /* light text */
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #bb86fc; /* purple accent */
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: #1f1f1f; /* slightly lighter dark */
+    color: #e0e0e0;
+}
+
+[data-testid="stSidebar"] h1, 
+[data-testid="stSidebar"] h2 {
+    color: #03dac6; /* teal accent */
+}
+
+/* Buttons */
+button {
+    background-color: #bb86fc !important;
+    color: #121212 !important;
+    border-radius: 6px !important;
+    font-weight: bold !important;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th {
+    background-color: #03dac6;
+    color: #121212;
+    padding: 8px;
+}
+
+table td {
+    padding: 8px;
+    border-bottom: 1px solid #333333;
+}
+
+/* Links */
+a {
+    color: #bb86fc;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Toggle switch container */
+.theme-toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+/* Hide default checkbox */
+.theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 26px;
+}
+
+/* Circle knob */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Checked state */
+input:checked + .slider {
+  background-color: #1a73e8; /* brand color */
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Tab container */
+.theme-tabs {
+  display: flex;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+/* Individual tab */
+.theme-tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Active tab */
+.theme-tab.active {
+  border-bottom: 3px solid #1a73e8; /* brand color */
+  font-weight: bold;
+}
+
+/* Hover effect */
+.theme-tab:hover {
+  background-color: #f0f0f0;
+}

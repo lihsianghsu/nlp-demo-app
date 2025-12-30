@@ -1,0 +1,17 @@
+lingua-synapse-app/
+├─ app.py
+├─ pages/
+│   ├─ Home.py
+│   └─ Tools.py
+├─ ls_ui/
+│   ├─ __init__.py
+│   ├─ theme.py
+│   ├─ grid.py
+│   ├─ cards.py
+│   ├─ motion.py
+│   └─ assets/
+│       ├─ brand.css
+│       ├─ logo.svg
+│       └─ __init__.py
+├─ requirements.txt
+└─ README.md
