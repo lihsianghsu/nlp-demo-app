@@ -385,7 +385,7 @@ with tabs[2]:
 
     with right:
         with card("Dataset Deduplication", muted=True):
-            st.info("Run 'Recognize Entities' to see results.")
+            st.info("Run 'Deduplication' to see results.")
             with st.expander("ℹ️ About this tool"):
                 st.caption(
                     """
