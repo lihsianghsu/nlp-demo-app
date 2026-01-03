@@ -199,6 +199,7 @@ def render_footer():
         }
         .footer-icons {
             margin-top: 0.5rem;
+            margin-bottom: 12px
         }
         .footer-icons a {
             display: inline-block;
@@ -217,7 +218,6 @@ def render_footer():
         </style>
 
         <footer class="footer">
-            © 2025 Lingua Synapse. All rights reserved.
             <div class="footer-icons">
                 <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
                     <!-- GitHub SVG -->
@@ -246,10 +246,11 @@ def render_footer():
                 <a href="mailto:lihsianghsu@yahoo.fr" target="_blank" rel="noopener noreferrer">
                     <!-- Email SVG -->
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                     </svg>
                 </a>
             </div>
+            <div>© 2025 Lingua Synapse. All rights reserved.</div>
         </footer>
         """,
         unsafe_allow_html=True
